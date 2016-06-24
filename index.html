@@ -120,11 +120,9 @@
 
   </style>
 
-
-
     
 
-  </head>
+</head>
   <body>
       <section id="header">
          
@@ -498,7 +496,7 @@
             initBannerVideoSize('.video-container video');
                 
             $(window).on('resize', function() {
-               // scaleVideoContainer();
+                scaleVideoContainer();
                // scaleBannerVideoSize('.video-container .poster img');
                 //scaleBannerVideoSize('.video-container .filter');
                 scaleBannerVideoSize('.video-container video');
@@ -519,12 +517,12 @@
 
         function initBannerVideoSize(element){
             
-            $(element).each(function(){
+         
+
+            scaleBannerVideoSize(   $(element).each(function(){
                 $(this).data('height', $(this).height());
                 $(this).data('width', $(this).width());
-            });
-
-            scaleBannerVideoSize(element);
+            }));
 
         }
 
