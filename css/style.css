@@ -61,10 +61,14 @@ a, button{
 #header .position-logo{
     padding: 12px;
     margin-right: 25px;
+    
+
 }
 
 #header .position-logo:hover{
     background-color: transparent;
+    
+
 }
 
 #header .social-icons{
@@ -120,6 +124,7 @@ a, button{
     font-size: 50px;
     color: #F2F4F2;
     margin: 0px;
+
 }
 
 #featured p{
@@ -201,12 +206,12 @@ a, button{
 
 #about h1{
     margin: 0px;
-    padding: 35px 0px 0px 25px;
+    padding: 35px 0px 0px 10px;
     font-weight: bold;
 }
 
 #about .text-about{
-   padding: 30px 20px 50px;
+   padding: 50px 20px 50px;
     
 }
 
@@ -295,7 +300,7 @@ a, button{
 
 #free h1{
     margin: 0px;
-    padding: 35px 0px 0px 27px;
+    padding: 35px 0px 0px 10px;
     font-weight: bold;
     color: #fff;
 }
@@ -420,7 +425,7 @@ a, button{
 }
 
 #enjoy .position-form-enjoy{
-    margin-top: 90px;
+    margin-top: 120px;
     padding: 0px 140px;
 
 }
@@ -537,7 +542,7 @@ a, button{
     background-color: #363636;
     border-bottom: 8px #000 solid;
 
-}#about .text-ab
+}
 
 #footer .social-icons-footer{
     padding: 35px 0px 0px 15px;
@@ -575,33 +580,4 @@ a, button{
 #footer .mail:hover{
     color: #F8C336;
 
-}
-.description .inner {
-      font-size: 1em;
-      width: 45%;
-      margin: 0 auto;
-    }.homepage-hero-module
-
-.title-container {
-      position: absolute;
-      top: 35%;
-      width: 100%;
-      text-align: center;
-      color: #fff;
-}
-
-video#videobg { 
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -100;
-  transform: translateX(-50%) translateY(-50%);
-  color: #fff;
-  
-  background-size: cover;
-  transition: 1s opacity;
 }
