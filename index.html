@@ -46,81 +46,7 @@
             r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
             a.appendChild(r);
         })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
-    </script>
-
-
-  <style type="text/css">
-
-    .homepage-hero-module {
-      border-right: none;
-      border-left: none;
-      position: relative;
-    }
-    .no-video .video-container video,
-    .touch .video-container video {
-      display: none;
-    }
-    .no-video .video-container .poster,
-    .touch .video-container .poster {
-      display: block !important;
-    }
-    .video-container {
-      position: relative;
-      bottom: 0%;
-      left: 0%;
-      height: 100%;
-      width: 100%;
-      overflow: hidden;
-      background: #000;
-    }
-    .video-container .poster img {
-      width: 100%;
-      bottom: 0;
-      position: absolute;
-    }
-    .video-container .filter {
-      z-index: 100;
-      position: absolute;
-      background: rgba(0, 0, 0, 0.4);
-      width: 100%;
-    }
-    .video-container .title-container {
-      z-index: 1000;
-      position: absolute;
-      top: 35%;
-      width: 100%;
-      text-align: center;
-      color: #fff;
-    }
-    .video-container .description .inner {
-      font-size: 1em;
-      width: 45%;
-      margin: 0 auto;
-    }
-    .video-container .link {
-      position: absolute;
-      bottom: 3em;
-      width: 100%;
-      text-align: center;
-      z-index: 1001;
-      font-size: 2em;
-      color: #fff;
-    }
-    .video-container .link a {
-      color: #fff;
-    }
-    .video-container video {
-      position: absolute;
-      z-index: 0;
-      bottom: 0;
-    }
-    .video-container video.fillWidth {
-      width: 100%;
-    }
-
-  </style>
-
-    
+    </script>    
 
 </head>
   <body>
@@ -176,7 +102,7 @@
               </ol>
 -->          
           <div class="homepage-hero-module">
-              <div class="video-container">
+           
                   <div class="title-container">
                       <div class="headline">
                             <h1>O seu condomínio na sua mão</h1>
@@ -186,8 +112,8 @@
                           <div class="inner">Conheça o eCondos, um sistema gratuito que permite a gestão através de uma rede colaborativa e completa para o síndico e todos os condôminos</div>
                           <div class=""><a href="#enjoy" class="btn btn-defaul btn-custom scroll-link">Cadastre-se agora</a></div>
                       </div>
-                  </div>
-                  <video autoplay loop class="fillWidth" style="height: auto;">
+                 
+                  <video autoplay id="videobg" loop>
                   <source src="img/building.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.</video>
               </div>
           </div>
@@ -511,46 +437,6 @@
             var unitHeight = parseInt(height) + 'px';
             $('.homepage-hero-module').css('height',unitHeight);
 
-        }
-
-        function initBannerVideoSize(element){
-            
-         
-
-            scaleBannerVideoSize(   $(element).each(function(){
-                $(this).data('height', $(this).height());
-                $(this).data('width', $(this).width());
-            }));
-
-        }
-
-        function scaleBannerVideoSize(element){
-
-            var windowWidth = $(window).width(),
-                windowHeight = $(window).height(),
-                videoWidth,
-                videoHeight;
-
-            $(element).each(function(){
-                var videoAspectRatio = $(this).data('height')/$(this).data('width'),
-                    windowAspectRatio = windowHeight/windowWidth;
-
-                if (videoAspectRatio > windowAspectRatio) {
-                    videoWidth = windowWidth;
-                    videoHeight = videoWidth * videoAspectRatio;
-                    $(this).css({'top' : -(videoHeight - windowHeight) / 2 + 'px', 'margin-left' : 0});
-                } else {
-                    videoHeight = windowHeight;
-                    videoWidth = videoHeight / videoAspectRatio;
-                    $(this).css({'margin-top' : 0, 'margin-left' : -(videoWidth - windowWidth) / 2 + 'px'});
-                }
-
-                $(this).width(videoWidth).height(videoHeight);
-
-                $('.homepage-hero-module .video-container video').addClass('fadeIn animated');
-                
-
-            });
         }
 
     </script>
