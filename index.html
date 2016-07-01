@@ -48,6 +48,45 @@
         })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
     </script>
 
+
+  <style type="text/css">
+    .no-video .video-container video,
+    .touch .video-container video {
+      display: none;
+    }
+    .video-container {
+      position: relative;
+      top: 0;
+      bottom: 0%;
+      left: 0%;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      background: #000;
+    }
+    .video-container .title-container {
+      z-index: 1000;
+      position: absolute;
+      top: 35%;
+      width: 100%;
+      text-align: center;
+      color: #fff;
+    }
+    .video-container .description .inner {
+      z-index: 1000;
+      font-size: 1em;
+      margin: 0 auto;
+    }
+    .video-container video {
+      position: absolute;
+      z-index: 0;
+      bottom: 0;
+    }
+
+  </style>
+
+    
+
 </head>
   <body>
       <section id="header">
