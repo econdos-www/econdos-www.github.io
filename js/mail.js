@@ -8,10 +8,11 @@
 
     name = form.find('input.name');
     email = form.find('input.email');
-    password = form.find('input.password');
+    //password = form.find('input.password');
 
-    if (name.val() === '' || email.val() === '' || password.val() === '') {
-      return swal('Ops...', 'Por favor, para que possamos entrar em contato preencha todos os campos!', 'info');
+    //if (name.val() === '' || email.val() === '' || password.val() === '') 
+    if (name.val() === '' || email.val() === '') {
+          return swal('Ops...', 'Por favor, para que possamos entrar em contato preencha todos os campos!', 'info');
     }
 
     $.ajax({
@@ -20,7 +21,7 @@
       data : {
         name: name.val(),
         email: email.val(),
-        password: password.val()
+        //password: password.val()
       }
     }).success(function (response) {
       if (response._id) {
@@ -28,5 +29,6 @@
         name.val(''); email.val(''); password.val('');
       }
     });
+    swal('Obrigado!', 'Aguarde que logo entraremos em contato!', 'success');
   });
 }());
