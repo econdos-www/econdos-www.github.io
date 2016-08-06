@@ -2,16 +2,15 @@
   var btnContactUs = $('#btnContactUs');
 
   btnContactUs.on('click', function () {
-    var form, name, email, password, content;
+    var form, name, email, password;
 
     form = $('form[name="contact"]');
 
     name = form.find('input.name');
     email = form.find('input.email');
-    //password = form.find('input.password');
+    password = form.find('input.password');
 
-    //if (name.val() === '' || email.val() === '' || password.val() === '') 
-    if (name.val() === '' || email.val() === '') {
+    if (name.val() === '' || email.val() === '' || password.val() === '') {
           return swal('Ops...', 'Por favor, para que possamos entrar em contato preencha todos os campos!', 'info');
     }
 
@@ -20,8 +19,8 @@
       url  : "https://econdos.herokuapp.com/api/v1/users",
       data : {
         name: name.val(),
-        email: email.val()
-        //password: password.val()
+        email: email.val(),
+        password: password.val()
       }
     }).success(function (response) {
       if (response._id) {
