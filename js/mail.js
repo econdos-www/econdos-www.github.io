@@ -15,20 +15,19 @@
           return swal('Ops...', 'Por favor, para que possamos entrar em contato preencha todos os campos!', 'info');
     }
 
-    // $.ajax({
-    //   type : "POST",
-    //   url  : "https://econdos-backend.herokuapp.com/api/v1/users",
-    //   data : {
-    //     name: name.val(),
-    //     email: email.val(),
-    //     //password: password.val()
-    //   }
-    // }).success(function (response) {
-    //   if (response._id) {
-    //     swal('Obrigado!', 'Aguarde que logo entraremos em contato!', 'success');
-    //     name.val(''); email.val(''); password.val('');
-    //   }
-    // });
-    swal('Obrigado!', 'Aguarde que logo entraremos em contato!', 'success');
+    $.ajax({
+      type : "POST",
+      url  : "https://econdos.herokuapp.com/api/v1/users",
+      data : {
+        name: name.val(),
+        email: email.val()
+        //password: password.val()
+      }
+    }).success(function (response) {
+      if (response._id) {
+        swal('Obrigado!', 'Aguarde que logo entraremos em contato!', 'success');
+        name.val(''); email.val(''); password.val('');
+      }
+    });
   });
 }());
